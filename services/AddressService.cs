@@ -13,7 +13,6 @@ namespace UserApi.Services
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-
             _addressList = database.GetCollection<Address>(settings.AddressListCollectionName);
         }
 
